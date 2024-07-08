@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<div class="mt-4">
+    <h2>Editar Herramienta</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="title">Nombre de la Herramienta</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ book[1] }}"  required>
+        </div>
+        <div class="form-group">
+            <label for="author">Dueño</label>
+            <input type="text" class="form-control" id="author" name="author" value="{{ book[2] }}"  required>
+        </div>
+        <div class="form-group">
+            <label for="editrial">Marca</label>
+            <input type="text" class="form-control" id="editorial" name="editorial" value="{{ book[3] }}"  required>
+        </div>
+
+        <div class="form-group">
+            <label for="anio">Año de Fabricacion</label>
+            <input type="text" class="form-control" id="anio" name="anio" value="{{ book[4] }}"  required>
+        </div>
+
+        <div class="form-group">
+            <label for="genero">Tipo de Herramienta</label>
+            <input type="text" class="form-control" id="genero" name="genero" value="{{ book[5] }}"  required>
+        </div>
+
+        <div class="form-group">
+            <label for="stock">Cantidad Disponible</label>
+            <input type="text" class="form-control" id="stock" name="stock" value="{{ book[6] }}"  required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Actualizar Herramienta</button>
+    </form>
+</div>
+{% endblock %}

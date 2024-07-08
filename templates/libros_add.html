@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<div class="mt-4">
+    <h2>Agregar Herramienta</h2>
+    <form method="post">
+        <div class="form-group">
+            <label for="title">Nombre de la Herramienta</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="author">Dueño</label>
+            <input type="text" class="form-control" id="author" name="author" required>
+        </div>
+        <div class="form-group">
+            <label for="editrial">Marca</label>
+            <input type="text" class="form-control" id="editorial" name="editorial" required>
+        </div>
+
+        <div class="form-group">
+            <label for="anio">Año de Fabricacion</label>
+            <input type="text" class="form-control" id="anio" name="anio" required>
+        </div>
+
+        <div class="form-group">
+            <label for="genero">Tipo de Herramienta</label>
+            <input type="text" class="form-control" id="genero" name="genero" required>
+        </div>
+
+        <div class="form-group">
+            <label for="stock">Cantidad Disponible</label>
+            <input type="text" class="form-control" id="stock" name="stock" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Agregar Herramienta</button>
+    </form>
+</div>
+{% endblock %}
